@@ -133,6 +133,7 @@ const BrickBreakerGame = () => {
     // 落地失败
     if (ball.y + ball.r > canvas.height) {
       confirm(`游戏结束！得分：${data.currentScore}`);
+      setGameIsOver(true)
       window.location.reload();
       return;
     }
